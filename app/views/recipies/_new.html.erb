@@ -1,0 +1,19 @@
+<div class="bloc4 left">
+  <div class="titre"><h2>Ajouter un ingrédient</h2></div>
+  <table style="height: 70px">
+<%= form_for(Recipie.new, :html => { :class => "left"}) do |f| %>
+    <%= f.hidden_field :item_id,  :value => item_id %>
+    <tr> 
+      <td>Ingrédient</td> 
+      <td><%= text_field_with_auto_complete :recipie, :ingredient_name, { :size => 25 }, { :url => items_path(:js), :method => :get, :with => "'search=' + element.value" } %></td>
+    </tr>
+    <tr>
+      <td>Nombre</td> 
+      <td><%= f.number_field :number, :size => 1 %></td>
+    </tr>
+    <tr> 
+      <td></td><td><%= f.submit "Ajouter" %></td>
+    </tr>
+<% end %>
+</table>
+</div>

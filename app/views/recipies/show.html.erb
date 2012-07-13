@@ -1,0 +1,13 @@
+<div id="board" class="section"><%= link_to 'Board', root_path %>
+  <div class="nom"><h1>Item: <%= @item.name %></h1></div>    
+</div>
+<div class="section">
+  <%= render :partial => "items/edit", :locals => { :item => @item } %>
+  <%= render :partial => "recipies/new", :locals => { :item_id => @item.id } %>
+  <%= render :partial => "recipies/view", :locals => { :recipies => @recipies } %>
+</div>
+<div class="section">
+  <%= render :partial => "items/new" %>
+  <%= render :partial => "recipies/new2", :locals => { :ingredient_id => @item.id } %>
+  <%= render :partial => "recipies/view2", :locals => { :recipies => @composants } %>
+</div>

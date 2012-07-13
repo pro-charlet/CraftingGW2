@@ -1,0 +1,17 @@
+<div class="bloc left">
+  <div class="titre"><h2>Items à réaliser</h2></div>
+  <table style="width: 100%">
+    <% craftings.each_key do |key| %>
+    <tr>
+      <td colspan="3"><%= craftmen.select {|v| v.crafting_id == key}[0].crafting.name unless craftings[key].empty? %></td>
+    </tr>
+    <% craftings[key].each do |wish| %>
+    <tr>
+      <td class="td_indent"></td>  
+      <td><%= link_to wish.name, recipy_path(wish.item) %></td>
+      <td style="width: 50px"><%= wish.niveau %></td>
+    </tr>
+    <% end %>
+    <% end %>
+  </table>
+</div>

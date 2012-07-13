@@ -1,0 +1,14 @@
+<div class="bloc">
+  <div class="titre"><h2>Matériaux nécessaires</h2></div>
+  <table style="width: 100%">
+  <tr>
+      <td colspan="2"></td>
+  </tr>
+  <% items.each do |item| %>
+    <tr>
+      <td style="width: 30px"></td>  
+      <td><%= item.name %></td>
+    </tr>
+  <% end %>
+  </table>
+</div>

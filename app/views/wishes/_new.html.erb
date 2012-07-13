@@ -1,0 +1,9 @@
+<div class="left">
+  <table style="height: 70px"><tr>
+<%= form_for(Wishe.new, :html => { :class => "left"}) do |f| %>
+    <%= f.hidden_field :member_id,  :value => member_id %>
+    <td><%= text_field_with_auto_complete :wishe, :item_name, { :size => 40 }, { :url => items_path(:js), :method => :get, :with => "'search=' + element.value" } %></td> 
+    <td><%= f.submit "Ajouter" %></td>
+<% end %>
+</tr></table>
+</div>

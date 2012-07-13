@@ -1,0 +1,51 @@
+<div class="bloc left">
+  <div class="titre"><h2>Matériaux nécessaires</h2></div>
+  <table style="width: 100%">
+  <tr>
+      <td colspan="5">Par récolte:</td>
+  </tr>
+  <% items.select {|k, v| v[:item].gathering }.each do |key, item| %>
+  <tr>
+    <%= form_for(item[:item], :remote => true) do |f| %>
+      <td style="width: 30px"></td>  
+      <td><%= item[:item].name %></td>
+      <td><%= item[:sum] %></td>
+      <td><%= f.collection_select :priority_id, Priority.find(:all), :id, :name %></td>
+      <td><%= f.submit "Change", :method => 'PUT' %></td>
+    <% end %>
+    </tr>
+  <% end %>
+
+  <tr>
+      <td colspan="5">Par recyclage/loot:</td>
+  </tr>
+  <% items.select {|k, v| v[:item].looting||v[:item].salvaging }.each do |key, item| %>
+  <tr>
+    <%= form_for(item[:item], :remote => true) do |f| %>
+      <td style="width: 30px"></td>  
+      <td><%= item[:item].name %></td>
+      <td><%= item[:sum] %></td>
+      <td><%= f.collection_select :priority_id, Priority.find(:all), :id, :name %></td>
+      <td><%= f.submit "Change", :method => 'PUT' %></td>
+    <% end %>
+    </tr>
+  <% end %>
+
+  <tr>
+      <td colspan="5">Par achat:</td>
+  </tr>
+  <% items.select {|k, v| v[:item].purchasing }.each do |key, item| %>
+  <tr>
+    <%= form_for(item[:item], :remote => true) do |f| %>
+      <td style="width: 30px"></td>  
+      <td><%= item[:item].name %></td>
+      <td><%= item[:sum] %></td>
+      <td><%= f.collection_select :priority_id, Priority.find(:all), :id, :name %></td>
+      <td><%= f.submit "Change", :method => 'PUT' %></td>
+    <% end %>
+    </tr>
+  <% end %>
+
+  </table>
+</div>
+

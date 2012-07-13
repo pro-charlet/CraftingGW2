@@ -1,0 +1,12 @@
+<div class="bloc left">
+  <div class="titre"><h2>Liste des ingrédients</h2></div>
+  <table style="width: 100%">
+    <% recipies.each do |recipie| %>
+    <tr>
+      <td style="width: 50px"><%= recipie.number %></td>  
+      <td><%= link_to recipie.ingredient.name, recipy_path(recipie.ingredient) %></td>
+      <td><%= button_to "Delete", recipy_path(recipie), :method => :delete %></td>  
+    </tr>  
+    <% end %>
+  </table>
+</div>

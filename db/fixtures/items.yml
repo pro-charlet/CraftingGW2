@@ -1,0 +1,46 @@
+manteau_brode_puissant:
+  id: 1
+  name: Manteau brodé puissant
+  crafting_id: 3
+  niveau: 10
+  
+insigne_puissant_jute:
+  id: 2
+  name: Insigne puissant en jute
+  
+panneau_tunique_jute:
+  id: 3
+  name: Panneau de tunique en jute
+  
+doublure_tunique_jute:
+  id: 4
+  name: Doublure de tunique en jute
+  
+sang_faible:
+  id: 5
+  name: Flacon de sang faible
+  looting: true
+  
+rouleau_jute:
+  id: 6
+  name: Rouleau de jute
+  
+chute_jute:
+  id: 7
+  name: Chute de jute
+  salvaging: true
+  
+carre_cuir_grossier_etire:
+  id: 8
+  name: Carré de cuir grossier étiré
+  
+bobine_fil_jute:
+  id: 9
+  name: Bobine de fil de jute
+  purchasing: true
+  
+morceau_cuir_grossier:
+  id: 10
+  name: Morçeau de cuir grossier
+  salvaging: true
+    

@@ -1,0 +1,48 @@
+kuklos_craft_1:
+  id: 1
+  member_id: 1
+  crafting_id: 3
+  level: 10
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+
+kuklos_craft_2:
+  id: 2
+  member_id: 1
+  crafting_id: 5
+  level: 30
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+
+kuklos_craft_3:
+  id: 3
+  member_id: 1
+  crafting_id: 6
+  level: 50
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+
+syko_craft_1:
+  id: 4
+  member_id: 2
+  crafting_id: 6
+  level: 20
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+
+syko_craft_2:
+  id: 5
+  member_id: 2
+  crafting_id: 2
+  level: 20
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+
+syko_craft_3:
+  id: 6
+  member_id: 2
+  crafting_id: 5
+  level: 55
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  

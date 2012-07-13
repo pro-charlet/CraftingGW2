@@ -1,0 +1,17 @@
+<div class="bloc left">
+  <div class="titre"><h2>Demandes en cours</h2></div>
+  <table style="width: 100%">
+    <tr>
+      <td colspan="5">En attente:</td>
+    </tr>
+    <% wishes.select {|v| v.statut == "Recherche"}.each do |wish| %>
+    <tr>
+      <td class="td_indent"></td>
+      <td><%= wish.member.name %></td>
+      <td><%= wish.item.name %></td>  
+      <td><%= wish.item.crafting.name unless wish.item.crafting.nil? %></td>  
+      <td><%= wish.item.niveau %></td>  
+    </tr>
+    <% end %>
+  </table>
+</div>

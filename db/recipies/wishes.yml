@@ -1,0 +1,7 @@
+kuklos_wish_1:
+  id: 1
+  member_id: 1
+  item_id: 1
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  

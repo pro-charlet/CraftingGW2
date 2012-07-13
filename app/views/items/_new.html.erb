@@ -1,0 +1,17 @@
+<div class="bloc4 left">
+  <div class="titre"><h2>Ajouter un nouvel item</h2></div>
+  <table>
+  <%= form_for(Item.new) do |f| %>
+  <tr><td>Nom</td><td><%= f.text_field :name, :size => 25 %></td></tr>
+  <tr><td>Métier</td><td><%= f.collection_select :crafting_id, Crafting.find(:all), :id, :name, {:include_blank => true, :selected => nil} %></td></tr>
+  <tr><td>Niveau</td><td><%= f.text_field :niveau, :size => 4 %></td></tr> 
+  
+  <tr><td>Récoltable</td><td><%= f.check_box :gathering %></td></tr>
+  <tr><td>Lootable</td><td><%= f.check_box :looting %></td></tr>
+  <tr><td>Reclyclable</td><td><%= f.check_box :salvaging %></td></tr>
+  <tr><td>Achetable</td><td><%= f.check_box :purchasing %></td></tr>
+  
+  <tr><td></td><td><%= f.submit "Créer", :method => 'POST' %></td></tr>  
+  <% end %>
+  </table>
+</div>

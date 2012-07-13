@@ -1,0 +1,9 @@
+<div id="board" class="section">
+  <div class="nom"><h1>Tableau de bord</h1></div>
+  <div class="perso"><%= render :partial => "members/new" %></div>
+</div>
+<div class="section">
+    <%= render :partial => "boards/craftmen", :locals => { :craftmen => @craftmen } %>
+    <%= render :partial => "boards/items", :locals => { :items => @ingredient } %>
+    <%= render :partial => "wishes/index", :locals => { :wishes => @wishes } %>
+</div>

@@ -1,0 +1,19 @@
+<div class="bloc4 left">
+  <div class="titre"><h2>Modifier l'item</h2></div>
+  <table>
+  <%= form_for(item) do |f| %>
+  <tr><td>Nom</td><td><%= f.text_field :name, :size => 25 %></td></tr>
+  <tr><td>Métier</td><td><%= f.collection_select :crafting_id, Crafting.find(:all), :id, :name, {:include_blank => true} %></td></tr>
+  <tr><td>Niveau</td><td><%= f.text_field :niveau, :size => 4 %></td></tr> 
+  
+  <tr><td>Récoltable</td><td><%= f.check_box :gathering %></td></tr>
+  <tr><td>Lootable</td><td><%= f.check_box :looting %></td></tr>
+  <tr><td>Reclyclable</td><td><%= f.check_box :salvaging %></td></tr>
+  <tr><td>Achetable</td><td><%= f.check_box :purchasing %></td></tr>
+  
+  <tr><td>Priorité</td><td><%= f.collection_select :priority_id, Priority.find(:all), :id, :name %></td></tr>
+  
+  <tr><td></td><td><%= f.submit "Modifier", :method => 'PUT' %></td></tr>  
+  <% end %>
+  </table>
+</div>

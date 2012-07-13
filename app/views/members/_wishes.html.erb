@@ -1,0 +1,21 @@
+<div class="bloc left">
+  <div class="section">
+    <div class="left"><h2>Items souhaités</h2></div>
+    <%= render :partial => "wishes/new", :locals => { :member_id => id } %>
+  </div>
+  <div class="titre"></div>
+  <div class="section">
+    <table class="left">
+    <% wishes.each_with_index do |wish, i| %>
+    <tr><%= render :partial => "wishes/show", :locals => { :wishe => wish } if i.even? %></tr>
+    <% end %>
+    </table>
+
+    <table class="left">
+    <% wishes.each_with_index do |wish, i| %>
+    <tr><%= render :partial => "wishes/show", :locals => { :wishe => wish } unless i.even? %></tr>
+    <% end %>
+    </table>
+
+  </div>
+</div>

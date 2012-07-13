@@ -1,0 +1,15 @@
+faible:
+  id: 1
+  name: Faible
+  
+normal:
+  id: 2
+  name: Normal
+  
+haute:
+  id: 3
+  name: Haute
+  
+ultime:
+  id: 4
+  name: Ultime
