@@ -1,7 +1,7 @@
 ---
 artisanat.png: artisanat-38c21344e886bb4ff3f7f5bc48572ae3.png
 rails.png: rails-be8732dac73d845ac5b142c8fb5f9fb0.png
-application.js: application-0c3c7b0ea8c6f87cd845a6ded22872c4.js
+application.js: application-1852c5335a5fa92720e287e3033a6135.js
 boards.js: boards-3af39f1da6f167c2cbf453ed74daff3d.js
 craftmens.js: craftmens-3af39f1da6f167c2cbf453ed74daff3d.js
 items.js: items-3af39f1da6f167c2cbf453ed74daff3d.js
@@ -15,7 +15,6 @@ scriptaculous/src/effects.js: scriptaculous/src/effects-b5cea54e0067205c969033af
 scriptaculous/src/scriptaculous.js: scriptaculous/src/scriptaculous-ab101fb4d45d729d3934d9c3650a76c8.js
 scriptaculous/src/slider.js: scriptaculous/src/slider-2135f9a894ecac8dbba776284ebc97fa.js
 scriptaculous/src/sound.js: scriptaculous/src/sound-849e73cc26382fa8c1f25f070a5ba36f.js
-scriptaculous/src/unittest.js: scriptaculous/src/unittest-a11b732654a8034c123b1ab013ccec1b.js
 wishes.js: wishes-3af39f1da6f167c2cbf453ed74daff3d.js
 application.css: application-441fd9d96f84c367185cc4eb1affb5ee.css
 coffee-script.js: coffee-script-2a8520487f6ab8e241a2a78b0bc6748d.js
