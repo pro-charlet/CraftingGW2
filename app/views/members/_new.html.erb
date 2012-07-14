@@ -2,7 +2,7 @@
   <div class="titre"><h2>Accéder à ma page perso</h2></div>
   <table><tr>
   <%= form_for(Member.new) do |f| %>
-    <td><%= text_field_with_auto_complete :member, :name, { :size => 20 }, { :url => members_path(:js), :method => :get, :with => "'search=' + element.value" } %></td> 
+    <td><%= text_field_with_auto_complete :member, :name, { :size => 35 }, { :url => members_path(:js), :method => :get, :with => "'search=' + element.value" } %></td> 
     <td><%= f.submit "Consulter/Créer", :method => 'POST' %></td>
   <% end %>
   </tr></table>

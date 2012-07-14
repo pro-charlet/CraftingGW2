@@ -1,9 +1,17 @@
 <div class="bloc left">
-  <div class="titre"><h2>Matériaux nécessaires</h2></div>
+  <div class="titre"><h2>Matériaux nécessaires</h2>
+  <table style="width: 100%"><tr>
+    <td>Items</td>
+    <td class="td_indent"></td>
+    <td class="td_indent"></td>
+    <td class="td_indent"></td>
+    <td class="td_indent"></td>
+    <td>Priorité</td>
+  </tr></table>    
+  </div>
   <table style="width: 100%">
   <tr>
       <td colspan="6">Par récolte:</td>
-      <td>Priorité</td>
   </tr>
   <% items.select {|k, v| v[:item].gathering }.each do |key, item| %>
   <tr>
@@ -22,7 +30,6 @@
 
   <tr>
       <td colspan="6">Par recyclage/loot:</td>
-      <td>Priorité</td>
   </tr>
   <% items.select {|k, v| v[:item].looting||v[:item].salvaging }.each do |key, item| %>
   <tr>
@@ -41,7 +48,6 @@
 
   <tr>
       <td colspan="6">Par achat:</td>
-      <td>Priorité</td>
   </tr>
   <% items.select {|k, v| v[:item].purchasing }.each do |key, item| %>
   <tr>

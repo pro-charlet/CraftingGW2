@@ -1,9 +1,15 @@
 <div class="bloc left">
-  <div class="titre"><h2>Liste des artisants</h2></div>
+  <div class="titre"><h2>Liste des artisans</h2>
+    <table style="width: 100%"><tr>
+      <td>Métier</td>
+      <td class="td_indent"></td>
+      <td>Niveau</td>    
+    </tr></table>
+  </div>
   <table style="width: 100%">
     <% craftmen.each_value do |crafting| %>
     <tr>
-      <td colspan="3"><%= crafting[:name] %></td>  
+      <td colspan="2"><%= crafting[:name] %></td>
     </tr>
     <% crafting[:members].each do |member| %>
     <tr>

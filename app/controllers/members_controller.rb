@@ -6,9 +6,14 @@ class MembersController < ApplicationController
   end
 
   def create
-    @member = Member.find_or_create_by_name(params[:member][:name])
     
-    redirect_to member_path(@member)
+    unless params[:member][:name].empty?
+      @member = Member.find_or_create_by_name(params[:member][:name])
+    
+      redirect_to member_path(@member)
+    else
+      redirect_to root_path
+    end
   end
   
   def show
