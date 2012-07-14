@@ -5,5 +5,8 @@ class Item < ActiveRecord::Base
   belongs_to :crafting 
 
   attr_accessible :priority_id, :name, :url, :crafting_id, :niveau, :gathering, :looting, :salvaging, :purchasing
-    
+
+  def url_missing?
+    return self.url.nil? || self.url.empty?
+  end    
 end

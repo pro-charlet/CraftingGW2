@@ -17,6 +17,9 @@ body {
     background-size: contain;
 }
 
+a {
+    color: black;
+}
 #board {
 	float: left;
 	height: 350px;
@@ -51,12 +54,12 @@ body {
 }
 
 .bloc {
-    border: 2px solid black;
+    border: 2px solid #c0b9ac;
     margin: 10px;
 }
 
 .bloc4 {
-    border: 2px solid black;
+    border: 2px solid #c0b9ac;
     margin: 10px;
     width: 400px;
 }
@@ -64,7 +67,8 @@ body {
 .titre {
     font-size: 14px;
     text-align: center;
-    border: 2px solid black;
+    border: 2px solid #c0b9ac;
+    color: #a7605d;
     clear: both;
 }
 

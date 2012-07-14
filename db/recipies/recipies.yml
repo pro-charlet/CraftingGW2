@@ -69,3 +69,30 @@ doublure_tunique_jute:
   created_at: <%= Time.now %>
   updated_at: <%= Time.now %>
   
+lingot_cuivre:
+  item_id: 13
+  ingredient_id: 11  
+  number: 2
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+
+lingot_bronze_1:
+  item_id: 14
+  ingredient_id: 11  
+  number: 10
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+
+lingot_bronze_2:
+  item_id: 14
+  ingredient_id: 12  
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+
+planche_bois_vert:
+  item_id: 16
+  ingredient_id: 15  
+  number: 2
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  

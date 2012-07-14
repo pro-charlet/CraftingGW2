@@ -9,7 +9,7 @@
       <td class="td_indent"></td>
       <td><%= wish.member.name %></td>
       <td class="td_indent"></td>
-      <td><%= image_tag wish.item.url, :size => "25x25" unless wish.item.url.nil? %></td>
+      <td><%= image_tag wish.item.url, :size => "25x25" unless wish.item.url_missing? %></td>
       <td><%= link_to wish.item.name, recipy_path(wish.item) %></td>  
       <td class="td_indent"></td>
       <td><%= wish.item.crafting.name unless wish.item.crafting.nil? %></td>  
@@ -30,7 +30,7 @@
       <td class="td_indent"></td>
       <td><%= wish.member.name %></td>
       <td class="td_indent"></td>
-      <td><%= image_tag wish.item.url, :size => "25x25" unless wish.item.url.nil? %></td>
+      <td><%= image_tag wish.item.url, :size => "25x25" unless wish.item.url_missing? %></td>
       <td><%= link_to wish.item.name, recipy_path(wish.item) %></td>  
       <td class="td_indent"></td>
       <td><%= wish.item.crafting.name unless wish.item.crafting.nil? %></td>  
@@ -51,7 +51,7 @@
       <td class="td_indent"></td>
       <td><%= wish.member.name %></td>
       <td class="td_indent"></td>
-      <td><%= image_tag wish.item.url, :size => "25x25" unless wish.item.url.nil? %></td>
+      <td><%= image_tag wish.item.url, :size => "25x25" unless wish.item.url_missing? %></td>
       <td><%= link_to wish.item.name, recipy_path(wish.item) %></td>  
       <td class="td_indent"></td>
       <td><%= wish.item.crafting.name unless wish.item.crafting.nil? %></td>  

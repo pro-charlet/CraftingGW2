@@ -1,13 +1,13 @@
 <div id="board" class="section"><%= link_to image_tag('board.png', :size => '55x30'), root_path %>
-  <div class="nom"><%= image_tag @item.url unless @item.url.nil? %><h1>Item: <%= @item.name %></h1></div>    
+  <div class="nom"><%= image_tag(@item.url) unless @item.url_missing? %><h1>Item: <%= @item.name %></h1></div>    
 </div>
 <div class="section">
   <%= render :partial => "items/edit", :locals => { :item => @item } %>
-  <%= render :partial => "recipies/new", :locals => { :item_id => @item.id } %>
   <%= render :partial => "recipies/view", :locals => { :recipies => @recipies } %>
+  <%= render :partial => "recipies/new", :locals => { :item_id => @item.id } %>
 </div>
 <div class="section">
   <%= render :partial => "items/new" %>
-  <%= render :partial => "recipies/new2", :locals => { :ingredient_id => @item.id } %>
   <%= render :partial => "recipies/view2", :locals => { :recipies => @composants } %>
+  <%= render :partial => "recipies/new2", :locals => { :ingredient_id => @item.id } %>
 </div>

@@ -9,7 +9,7 @@
   <tr>
     <%= form_for(item[:item], :remote => true) do |f| %>
       <td class="td_indent"></td>
-      <td><%= image_tag item[:item].url, :size => "25x25" unless item[:item].url.nil? %></td>
+      <td><%= image_tag item[:item].url, :size => "25x25" unless item[:item].url_missing? %></td>
       <td><%= link_to item[:item].name, recipy_path(item[:item]) %></td>
       <td class="td_indent"></td>
       <td><%= item[:sum] %></td>
@@ -28,7 +28,7 @@
   <tr>
     <%= form_for(item[:item], :remote => true) do |f| %>
       <td class="td_indent"></td>
-      <td><%= image_tag item[:item].url, :size => "25x25" unless item[:item].url.nil? %></td>
+      <td><%= image_tag item[:item].url, :size => "25x25" unless item[:item].url_missing? %></td>
       <td><%= link_to item[:item].name, recipy_path(item[:item]) %></td>
       <td class="td_indent"></td>
       <td><%= item[:sum] %></td>
@@ -47,7 +47,7 @@
   <tr>
     <%= form_for(item[:item], :remote => true) do |f| %>
       <td class="td_indent"></td>
-      <td><%= image_tag item[:item].url, :size => "25x25" unless item[:item].url.nil? %></td>
+      <td><%= image_tag item[:item].url, :size => "25x25" unless item[:item].url_missing? %></td>
       <td><%= link_to item[:item].name, recipy_path(item[:item]) %></td>
       <td class="td_indent"></td>
       <td><%= item[:sum] %></td>

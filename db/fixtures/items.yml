@@ -53,4 +53,38 @@ morceau_cuir_grossier:
   name: Morçeau de cuir grossier
   url: http://media-ascalon.cursecdn.com/avatars/thumbnails/115/305/56/56/65940.png
   salvaging: true
+
+minerai_cuivre:
+  id: 11
+  name: Minerai de cuivre
+  url: http://media-ascalon.cursecdn.com/avatars/thumbnails/115/286/56/56/65925.png    
+  gathering: true
+
+minerai_etain:
+  id: 12
+  name: Minerai d'étain
+  url: http://media-ascalon.cursecdn.com/avatars/thumbnails/115/293/56/56/65932.png
+  purchasing: true
+  
+lingot_cuivre:
+  id: 13
+  name: Lingot de cuivre
+  url: http://media-ascalon.cursecdn.com/avatars/thumbnails/115/269/56/56/65909.png
+
+lingot_bronze:
+  id: 14
+  name: Lingot de bronze
+  url: http://media-ascalon.cursecdn.com/avatars/thumbnails/115/268/56/56/65908.png
+
+rondin_bois_vert:
+  id: 15
+  name: Rondin en bois vert
+  url: http://media-ascalon.cursecdn.com/avatars/thumbnails/115/309/56/56/65942.png
+  gathering: true
+  
+planche_bois_vert:
+  id: 16
+  name: Planche de bois vert
+  url: http://media-ascalon.cursecdn.com/avatars/thumbnails/115/299/56/56/65936.png
     
+        
