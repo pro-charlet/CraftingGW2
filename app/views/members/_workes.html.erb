@@ -8,7 +8,8 @@
     <% craftings[key].each do |wish| %>
     <tr>
       <td class="td_indent"></td>  
-      <td><%= link_to wish.name, recipy_path(wish.item) %></td>
+      <td><%= image_tag wish.url, :size => "25x25" unless wish.url.empty? %></td>
+      <td><%= link_to wish.name, recipy_path(wish.item_id) %></td>
       <td style="width: 50px"><%= wish.niveau %></td>
       <%= form_for(wish, :remote => true) do |f| %>
       <td><%= select_tag :statut, options_for_select(["Recherche", "Disponible"]) %></td>

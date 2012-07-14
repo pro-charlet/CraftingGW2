@@ -1,5 +1,5 @@
+<td><%= image_tag wishe.item.url, :size => "25x25" unless wishe.item.url_missing? %></td>  
+<td><%= link_to wishe.item.name, recipy_path(wishe.item) %></td>
 <%= form_for(wishe, :method => 'DELETE') do |f| %>
 <td><%= image_submit_tag 'delete.png' %></td>
 <% end %>
-<td><%= wishe.item.name %></td>
-<td><%= button_to "Recette", recipy_path(wishe.item), :method => :get %></td>

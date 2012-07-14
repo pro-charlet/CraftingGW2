@@ -14,7 +14,7 @@ class Wishe < ActiveRecord::Base
   end
 
   def self.find_crafting(crafting_id)
-    self.find_by_sql(["SELECT w.id, i.name, i.niveau FROM Wishes w, Items i WHERE w.item_id = i.id AND i.crafting_id = ? AND (Statut = ? OR Statut = ?)", crafting_id, "Recherche", "Disponible"])
+    self.find_by_sql(["SELECT w.id, i.id AS item_id, i.name, i.url, i.niveau FROM Wishes w, Items i WHERE w.item_id = i.id AND i.crafting_id = ? AND (Statut = ? OR Statut = ?)", crafting_id, "Recherche", "Disponible"])
   end
 
 end
