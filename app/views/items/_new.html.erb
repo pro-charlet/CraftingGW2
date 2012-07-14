@@ -3,6 +3,7 @@
   <table>
   <%= form_for(Item.new) do |f| %>
   <tr><td>Nom</td><td><%= f.text_field :name, :size => 25 %></td></tr>
+  <tr><td>Url</td><td><%= f.text_field :url, :size => 25 %></td></tr>
   <tr><td>Métier</td><td><%= f.collection_select :crafting_id, Crafting.find(:all), :id, :name, {:include_blank => true, :selected => nil} %></td></tr>
   <tr><td>Niveau</td><td><%= f.text_field :niveau, :size => 4 %></td></tr> 
   

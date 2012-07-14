@@ -1,7 +1,7 @@
 class BoardsController < ApplicationController
   
   def index
-    @wishes = Wishe.all
+    @wishes = Wishe.find(:all, :conditions => ["statut = ? OR statut = ? OR updated_at > ?", "Recherche", "Disponible", Date.current])
     
     @items = @wishes.collect{ |wish| {:item => wish.item, :sum => 1} }
     @ingredient = Hash.new

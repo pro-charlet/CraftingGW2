@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
   respond_to :html,:js
   
   def index
-    @items = Item.find(:all, :conditions => ['name LIKE ?', "%#{params[:search]}%"])
+    @items = Item.find(:all, :conditions => ['name ILIKE ?', "%#{params[:search]}%"])
   end
 
   def update
@@ -13,7 +13,6 @@ class ItemsController < ApplicationController
       format.js {}
       format.html { redirect_to recipy_path(@item) }
     end
-   
   end
   
   def create

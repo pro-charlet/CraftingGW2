@@ -3,18 +3,22 @@
 	<table>
       <% member.craftmen.each do |craftman| %>
 	  <tr>
+      <%= form_for(craftman, :method => 'DELETE') do |f| %>
+      <td><%= image_submit_tag 'delete.png' %></td>
+      <% end %>
       <%= form_for(craftman, :html => { :class => "left"}) do |f| %>
-      <td style="width: 150px"><%= craftman.craft_name %></td><td><%= f.number_field :level, :size => 1 %></td><td><%= f.submit "Save", :method => 'PUT' %></td>
-	  <% end %>
-	  <td><%= button_to "Delete", craftman_path(craftman), :method => :delete %></td>
+      <td style="width: 150px"><%= craftman.craft_name %></td><td><%= f.number_field :level, :size => 1 %></td><td><%= image_submit_tag 'save.png', :method => 'PUT', :class => "button" %></td>
+      <% end %>
+	  <td></td>
       </tr>
 	  <% end %>
 
       <tr></tr>
       <tr>  
+      <td></td>
       <%= form_for(Craftman.new) do |f| %>
       <%= f.hidden_field :member_id,  :value => member.id %>
-      <td style="width: 150px"><%= f.collection_select :crafting_id, Crafting.find(:all), :id, :name %></td><td><%= f.number_field :level, :size => 1 %></td><td><%= f.submit "Add", :method => 'POST' %></td>
+      <td style="width: 150px"><%= f.collection_select :crafting_id, Crafting.find(:all), :id, :name %></td><td><%= f.number_field :level, :size => 1 %></td><td colspan="3"><%= f.submit "Ajouter", :method => 'POST' %></td>
       <% end %>
       </tr>
     </table>

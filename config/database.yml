@@ -6,7 +6,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: pro-charlet
+  database: genesis
   pool: 5
   username: pro-charlet
   password: ho41erca

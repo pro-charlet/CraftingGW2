@@ -2,7 +2,7 @@ class MembersController < ApplicationController
   respond_to :html,:js 
 
   def index
-    @members = Member.find(:all, :conditions => ['name LIKE ?', "%#{params[:search]}%"])
+    @members = Member.find(:all, :conditions => ['name ILIKE ?', "%#{params[:search]}%"])
   end
 
   def create

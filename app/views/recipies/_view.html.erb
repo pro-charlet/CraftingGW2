@@ -3,9 +3,12 @@
   <table style="width: 100%">
     <% recipies.each do |recipie| %>
     <tr>
-      <td style="width: 50px"><%= recipie.number %></td>  
+      <td style="width: 50px"><%= recipie.number %></td>
+      <td><%= image_tag recipie.ingredient.url, :size => "25x25" unless recipie.ingredient.url.nil? %></td>  
       <td><%= link_to recipie.ingredient.name, recipy_path(recipie.ingredient) %></td>
-      <td><%= button_to "Delete", recipy_path(recipie), :method => :delete %></td>  
+      <%= form_for(recipie, :method => 'DELETE') do |f| %>
+      <td><%= image_submit_tag 'delete.png' %></td>
+      <% end %>
     </tr>  
     <% end %>
   </table>

@@ -1,46 +1,56 @@
 manteau_brode_puissant:
   id: 1
   name: Manteau brodé puissant
+  url: http://media-ascalon.cursecdn.com/avatars/thumbnails/116/833/56/56/61406.png
   crafting_id: 3
   niveau: 10
   
 insigne_puissant_jute:
   id: 2
   name: Insigne puissant en jute
+  url: http://media-ascalon.cursecdn.com/avatars/thumbnails/115/372/56/56/65997.png
   
 panneau_tunique_jute:
   id: 3
   name: Panneau de tunique en jute
+  url: http://media-ascalon.cursecdn.com/avatars/thumbnails/116/609/56/56/63503.png
   
 doublure_tunique_jute:
   id: 4
   name: Doublure de tunique en jute
+  url: http://media-ascalon.cursecdn.com/avatars/thumbnails/116/610/56/56/63504.png
   
 sang_faible:
   id: 5
   name: Flacon de sang faible
+  url: http://media-ascalon.cursecdn.com/avatars/thumbnails/115/791/56/56/66945.png
   looting: true
   
 rouleau_jute:
   id: 6
   name: Rouleau de jute
+  url: http://media-ascalon.cursecdn.com/avatars/thumbnails/115/306/56/56/63573.png
   
 chute_jute:
   id: 7
   name: Chute de jute
+  url: http://media-ascalon.cursecdn.com/avatars/thumbnails/115/304/56/56/65939.png
   salvaging: true
   
 carre_cuir_grossier_etire:
   id: 8
   name: Carré de cuir grossier étiré
+  url: http://media-ascalon.cursecdn.com/avatars/thumbnails/115/323/56/56/65955.png
   
 bobine_fil_jute:
   id: 9
   name: Bobine de fil de jute
+  url: http://media-ascalon.cursecdn.com/avatars/thumbnails/115/369/36/36/65994.png
   purchasing: true
   
 morceau_cuir_grossier:
   id: 10
   name: Morçeau de cuir grossier
+  url: http://media-ascalon.cursecdn.com/avatars/thumbnails/115/305/56/56/65940.png
   salvaging: true
     

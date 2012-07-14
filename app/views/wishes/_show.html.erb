@@ -1,3 +1,5 @@
+<%= form_for(wishe, :method => 'DELETE') do |f| %>
+<td><%= image_submit_tag 'delete.png' %></td>
+<% end %>
 <td><%= wishe.item.name %></td>
-<td><%= button_to "Delete", wishes_path(wishe), :method => :delete %></td>
 <td><%= button_to "Recette", recipy_path(wishe.item), :method => :get %></td>

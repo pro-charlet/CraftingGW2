@@ -26,18 +26,6 @@ body {
     width: 30px;
 }
 
-.large {
-    width: 90%
-}
-
-.demi {
-    width: 40%
-}
-
-.tier {
-    width: 25%
-}
-
 .section {
     clear: both;
     width: 100%;
@@ -50,6 +38,12 @@ body {
 
 .nom h1 {
     margin-right: 100px;
+    padding-top: 25px;
+}
+
+.nom img {
+    margin-right: 20px;
+    float: right;
 }
 
 .left {
@@ -77,4 +71,8 @@ body {
 .perso {
     float: right;
     padding-right: 50px;
+}
+
+.button {
+    padding-top: 4px;
 }

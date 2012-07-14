@@ -10,6 +10,10 @@
       <td class="td_indent"></td>  
       <td><%= link_to wish.name, recipy_path(wish.item) %></td>
       <td style="width: 50px"><%= wish.niveau %></td>
+      <%= form_for(wish, :remote => true) do |f| %>
+      <td><%= select_tag :statut, options_for_select(["Recherche", "Disponible"]) %></td>
+      <td><%= image_submit_tag 'save.png', :method => 'PUT', :class => "button" %></td>
+      <% end %>
     </tr>
     <% end %>
     <% end %>

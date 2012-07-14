@@ -4,6 +4,7 @@
     <% recipies.each do |recipie| %>
     <tr>
       <td style="width: 50px"><%= recipie.number %></td>  
+      <td><%= image_tag recipie.item.url, :size => "25x25" unless recipie.item.url.nil? %></td>  
       <td><%= link_to recipie.item.name, recipy_path(recipie.item) %></td>  
     </tr>  
     <% end %>
