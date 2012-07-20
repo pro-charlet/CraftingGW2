@@ -8,5 +8,13 @@ class Item < ActiveRecord::Base
 
   def url_missing?
     return self.url.nil? || self.url.empty?
+  end
+  
+  def craftable?
+    return !self.material?
+  end
+  
+  def material?
+    return self.gathering || self.looting || self.salvaging || self.purchasing
   end    
 end

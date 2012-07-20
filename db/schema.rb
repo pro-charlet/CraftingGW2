@@ -11,12 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120712140638) do
+ActiveRecord::Schema.define(:version => 20120720123534) do
 
   create_table "craftings", :force => true do |t|
     t.string   "name",       :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "icone"
   end
 
   add_index "craftings", ["name"], :name => "index_craftings_on_name", :unique => true
@@ -73,6 +74,7 @@ ActiveRecord::Schema.define(:version => 20120712140638) do
     t.string   "statut",     :default => "Recherche", :null => false
     t.datetime "created_at",                          :null => false
     t.datetime "updated_at",                          :null => false
+    t.integer  "number",     :default => 1,           :null => false
   end
 
 end

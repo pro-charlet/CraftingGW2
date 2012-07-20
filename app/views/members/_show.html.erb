@@ -1,11 +1,18 @@
 <div class="bloc4 left">
-  	<div class="titre"><h2>Professions</h2></div>
+  	<div class="titre"><h2>Professions</h2>
+    <table><tr>
+      <td>Métier</td>
+      <td width="120px"></td>
+      <td>Niveau</td>    
+    </tr></table>
+  	</div>
 	<table>
       <% member.craftmen.each do |craftman| %>
 	  <tr>
       <%= form_for(craftman, :method => 'DELETE') do |f| %>
       <td><%= image_submit_tag 'delete.png' %></td>
       <% end %>
+      <td><%= image_tag craftman.craft_image, :size => "25x25" unless craftman.craft_image.nil? %></td>
       <%= form_for(craftman, :html => { :class => "left"}) do |f| %>
       <td style="width: 150px"><%= craftman.craft_name %></td><td><%= f.number_field :level, :size => 1 %></td><td><%= image_submit_tag 'save.png', :method => 'PUT', :class => "button" %></td>
       <% end %>
@@ -15,6 +22,7 @@
 
       <tr></tr>
       <tr>  
+      <td></td>
       <td></td>
       <%= form_for(Craftman.new) do |f| %>
       <%= f.hidden_field :member_id,  :value => member.id %>

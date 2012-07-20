@@ -2,6 +2,14 @@
 artisanat.png: artisanat-38c21344e886bb4ff3f7f5bc48572ae3.png
 board.png: board-a16d12c0b4ce371a38dba809be5e9f48.png
 delete.png: delete-004ebe3501c01382390fd56df117e0dd.png
+m_armurier.png: m_armurier-5ce015a794b0407a3a7aab87f23c0e0c.png
+m_artificier.png: m_artificier-01731daecb01671751fda13b3af5bcdb.png
+m_bijoutier.png: m_bijoutier-387bda966265826c1a1ee25c678f3426.png
+m_chasseur.png: m_chasseur-51351dfd94e14fab7f8405a86683826c.png
+m_cuisinier.png: m_cuisinier-cdea6bd0c613b44cdef404deb0ce73d2.png
+m_forgeron.png: m_forgeron-19f834cc90d5d6f995725d48f85ade00.png
+m_tailleur.png: m_tailleur-425f3afea2d98c33bdc84c0a5b5db25e.png
+m_tanneur.png: m_tanneur-98d042b366ebc03e0b964b1063ab4169.png
 rails.png: rails-be8732dac73d845ac5b142c8fb5f9fb0.png
 save.png: save-5b8e3292b7313a2ebbe5c9a751ff24ee.png
 save2.png: save2-8a61e6b9bb3410575f3fc69c6a659e64.png
@@ -20,7 +28,7 @@ scriptaculous.js: scriptaculous-ab101fb4d45d729d3934d9c3650a76c8.js
 slider.js: slider-2135f9a894ecac8dbba776284ebc97fa.js
 sound.js: sound-849e73cc26382fa8c1f25f070a5ba36f.js
 wishes.js: wishes-3af39f1da6f167c2cbf453ed74daff3d.js
-application.css: application-71a59003d3ea52bdb377d27ed5b76197.css
+application.css: application-299bcf0a6c1d38fabd63937377230465.css
 jquery-ui.js: jquery-ui-5e86558a29e9896e7842cba13e007b88.js
 jquery-ui.min.js: jquery-ui.min-0e56c874a8ff809a50525176c91a2457.js
 jquery.js: jquery-765cc76e15d62a88cd61468aeaaaeb5d.js

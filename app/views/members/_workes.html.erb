@@ -1,15 +1,30 @@
 <div class="bloc left">
-  <div class="titre"><h2>Items à réaliser</h2></div>
+  <div class="titre"><h2>Items à réaliser</h2>
+    <table><tr>
+      <td>Métier</td>
+      <td class="td_indent"></td>
+      <td>Items</td>    
+      <td width="150px"></td>
+      <td>Niveau</td>    
+      <td class="td_indent"></td>
+      <td>Status</td>    
+    </tr></table>
+  </div>
   <table style="width: 100%">
     <% craftings.each_key do |key| %>
     <tr>
-      <td colspan="3"><%= craftmen.select {|v| v.crafting_id == key}[0].crafting.name unless craftings[key].empty? %></td>
+      <% unless craftings[key].empty? %>  
+      <% crafting = craftmen.select {|v| v.crafting_id == key}[0].crafting %>
+      <td><%= image_tag crafting.icone, :size => "25x25" unless crafting.icone.nil? %></td>
+      <td colspan="3"><%= crafting.name  %></td>
+      <% end %>
     </tr>
     <% craftings[key].each do |wish| %>
     <tr>
       <td class="td_indent"></td>  
       <td><%= image_tag wish.url, :size => "25x25" unless wish.url.empty? %></td>
       <td><%= link_to wish.name, recipy_path(wish.item_id) %></td>
+      <td class="td_indent"></td>  
       <td style="width: 50px"><%= wish.niveau %></td>
       <%= form_for(wish, :remote => true) do |f| %>
       <td><%= select_tag :statut, options_for_select(["Recherche", "Disponible"]) %></td>

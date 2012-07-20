@@ -3,7 +3,7 @@ class BoardsController < ApplicationController
   def index
     @wishes = Wishe.find(:all, :conditions => ["statut = ? OR statut = ? OR updated_at > ?", "Recherche", "Disponible", Date.current])
     
-    @items = @wishes.collect{ |wish| {:item => wish.item, :sum => 1} }
+    @items = @wishes.collect{ |wish| {:item => wish.item, :sum => wish[:number]} }
     @ingredient = Hash.new
     @items.collect{ |item| 
       if item[:item].recipies.empty?
@@ -15,7 +15,7 @@ class BoardsController < ApplicationController
     }
     
     @craftmen = Hash.new 
-    Crafting.all.collect { |c| @craftmen[c.id] = {:name => c.name, :members => []}}
+    Crafting.all.collect { |c| @craftmen[c.id] = {:name => c.name, :icone => c.icone, :members => []}}
     Craftman.find(:all, :order => 'level DESC').collect { |craftman| @craftmen[craftman.crafting_id][:members] << {:name => craftman.member.name, :level => craftman.level} }
     
   end

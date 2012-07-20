@@ -1,5 +1,14 @@
-<td><%= image_tag wishe.item.url, :size => "25x25" unless wishe.item.url_missing? %></td>  
-<td><%= link_to wishe.item.name, recipy_path(wishe.item) %></td>
+<td width="25px"><%= image_tag wishe.item.url, :size => "25x25" unless wishe.item.url_missing? %></td>
+
 <%= form_for(wishe, :method => 'DELETE') do |f| %>
-<td><%= image_submit_tag 'delete.png' %></td>
+  <td width="15px"><%= image_submit_tag 'delete.png' %></td>
+<% end %>
+
+<td><%= link_to wishe.item.name, recipy_path(wishe.item) %></td>
+
+<% if update %>
+<%= form_for(wishe, :method => 'PUT', :remote => true) do |f| %>
+  <td><%= f.number_field :number, :size => 1 %></td>
+  <td><%= image_submit_tag 'save.png', :class => "button" %></td>
+<% end %>
 <% end %>

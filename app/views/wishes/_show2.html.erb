@@ -1,0 +1,20 @@
+  <td class="td_indent"></td>
+  <td><%= wishe.member.name %></td>
+  <td class="td_indent"></td>
+  <td><%= image_tag wishe.item.url, :size => "25x25" unless wishe.item.url_missing? %></td>
+  <td><%= link_to wishe.item.name, recipy_path(wishe.item) %></td>  
+  <td class="td_indent"></td>
+  <% unless wishe.item.crafting.nil? %>
+    <td><%= image_tag wishe.item.crafting.icone, :size => "25x25" unless wishe.item.crafting.icone.nil? %></td>  
+    <td><%= wishe.item.niveau %></td>
+  <% else %>
+    <td></td><td></td>
+  <% end %>  
+  <td class="td_indent"></td>
+  <%= form_for(wishe, :method => 'PUT') do |f| %>
+  <td>
+    <%= select_tag :statut, options_for_select(["Disponible", "Recherche", "Annulé", "Donné"], wishe.statut) if update.has_key?(:statut) %>
+    <%= f.number_field :number, :size => 1 if update.has_key?(:number) %>
+  </td>
+  <td><%= image_submit_tag 'save.png', :class => "button" %></td>
+  <% end %>

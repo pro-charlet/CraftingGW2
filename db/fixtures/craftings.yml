@@ -1,31 +1,39 @@
 forgeron:
   id: 1
   name: Forgeron
+  icone: m_forgeron.png
   
 tanneur:
   id: 2
   name: Tanneur
+  icone: m_tanneur.png
   
 tailleur:
   id: 3
   name: Tailleur
+  icone: m_tailleur.png
   
 armurier:
   id: 4
   name: Armurier
+  icone: m_armurier.png
   
 chasseur:
   id: 5
   name: Chasseur
+  icone: m_chasseur.png
   
 artificier:
   id: 6
   name: Artificier
+  icone: m_artificier.png
   
 bijoutier:
   id: 7
   name: Bijoutier
+  icone: m_bijoutier.png
   
 cuisinier:
   id: 8
   name: Cuisinier
+  icone: m_cuisinier.png

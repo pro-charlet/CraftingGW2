@@ -20,6 +20,7 @@ body {
 a {
     color: black;
 }
+
 #board {
 	float: left;
 	height: 350px;
@@ -79,4 +80,14 @@ a {
 
 .button {
     padding-top: 4px;
+}
+
+.version {
+    float: right;
+    font-size: 10px;
+    color: gray;
+}
+
+.color {
+    color: #a7605d;
 }

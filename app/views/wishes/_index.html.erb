@@ -4,64 +4,29 @@
     <tr>
       <td colspan="5">Disponible:</td>
     </tr>
-    <% wishes.select {|v| v.statut == "Disponible"}.each do |wish| %>
-    <tr>
-      <td class="td_indent"></td>
-      <td><%= wish.member.name %></td>
-      <td class="td_indent"></td>
-      <td><%= image_tag wish.item.url, :size => "25x25" unless wish.item.url_missing? %></td>
-      <td><%= link_to wish.item.name, recipy_path(wish.item) %></td>  
-      <td class="td_indent"></td>
-      <td><%= wish.item.crafting.name unless wish.item.crafting.nil? %></td>  
-      <td><%= wish.item.niveau %></td>  
-      <td class="td_indent"></td>
-      <%= form_for(wish) do |f| %>
-      <td><%= select_tag :statut, options_for_select(["Disponible", "Recherche", "Annulé", "Donné"]) %></td>
-      <td><%= image_submit_tag 'save.png', :method => 'PUT', :class => "button" %></td>
-      <% end %>
-    </tr>
+    <% wishes.select {|v| v.statut == "Disponible" && v.item.craftable? }.each do |wish| %>
+      <tr><%= render :partial => "wishes/show2", :locals => { :wishe => wish, :update => {:statut => true} } %></tr>
     <% end %>
 
     <tr>
       <td colspan="5">En attente:</td>
     </tr>
-    <% wishes.select {|v| v.statut == "Recherche"}.each do |wish| %>
-    <tr>
-      <td class="td_indent"></td>
-      <td><%= wish.member.name %></td>
-      <td class="td_indent"></td>
-      <td><%= image_tag wish.item.url, :size => "25x25" unless wish.item.url_missing? %></td>
-      <td><%= link_to wish.item.name, recipy_path(wish.item) %></td>  
-      <td class="td_indent"></td>
-      <td><%= wish.item.crafting.name unless wish.item.crafting.nil? %></td>  
-      <td><%= wish.item.niveau %></td>  
-      <td class="td_indent"></td>
-      <%= form_for(wish) do |f| %>
-      <td><%= select_tag :statut, options_for_select(["Recherche", "Disponible", "Annulé", "Donné"]) %></td>
-      <td><%= image_submit_tag 'save.png', :method => 'PUT', :class => "button" %></td>
-      <% end %>
-    </tr>
+    <% wishes.select {|v| v.statut == "Recherche" && v.item.craftable?}.each do |wish| %>
+      <tr><%= render :partial => "wishes/show2", :locals => { :wishe => wish, :update => {:statut => true} } %></tr>
     <% end %>
 
     <tr>
       <td colspan="5">Traité:</td>
     </tr>
-    <% wishes.select {|v| (v.statut == "Annulé") || (v.statut == "Donné") }.each do |wish| %>
+    <% wishes.select {|v| v.item.craftable? && ((v.statut == "Annulé") || (v.statut == "Donné")) }.each do |wish| %>
+      <tr><%= render :partial => "wishes/show2", :locals => { :wishe => wish, :update => {:statut => true} } %></tr>
+    <% end %>
+
     <tr>
-      <td class="td_indent"></td>
-      <td><%= wish.member.name %></td>
-      <td class="td_indent"></td>
-      <td><%= image_tag wish.item.url, :size => "25x25" unless wish.item.url_missing? %></td>
-      <td><%= link_to wish.item.name, recipy_path(wish.item) %></td>  
-      <td class="td_indent"></td>
-      <td><%= wish.item.crafting.name unless wish.item.crafting.nil? %></td>  
-      <td><%= wish.item.niveau %></td>  
-      <td class="td_indent"></td>
-      <%= form_for(wish) do |f| %>
-      <td><%= select_tag :statut, options_for_select(["Recherche", "Disponible", "Annulé", "Donné"]) %></td>
-      <td><%= image_submit_tag 'save.png', :method => 'PUT', :class => "button" %></td>
-      <% end %>
+      <td colspan="5">Matériaux:</td>
     </tr>
+    <% wishes.select {|v| v.number > 0 && v.item.material? }.each do |wish| %>
+      <tr><%= render :partial => "wishes/show2", :locals => { :wishe => wish, :update => {:number => true} } %></tr>
     <% end %>
   </table>
 </div>

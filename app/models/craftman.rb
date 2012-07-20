@@ -9,6 +9,10 @@ class Craftman < ActiveRecord::Base
     crafting.name if crafting
   end
   
+  def craft_image
+    crafting.icone if crafting
+  end
+  
   def craft_name=(name)
     self.crafting = Crafting.find_by_name(name) unless name.blank?
     self.crafting_id = self.crafting.id unless self.crafting.nil?
