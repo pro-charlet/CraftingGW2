@@ -1,4 +1,5 @@
 class BoardsController < ApplicationController
+  before_filter :set_user
   
   def index
     @wishes = Wishe.find(:all, :conditions => ["statut = ? OR statut = ? OR updated_at > ?", "Recherche", "Disponible", Date.current])
