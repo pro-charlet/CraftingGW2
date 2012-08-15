@@ -17,7 +17,7 @@ class BoardsController < ApplicationController
     
     @craftmen = Hash.new 
     Crafting.all.collect { |c| @craftmen[c.id] = {:name => c.name, :icone => c.icone, :members => []}}
-    Craftman.find(:all, :order => 'level DESC').collect { |craftman| @craftmen[craftman.crafting_id][:members] << {:name => craftman.member.name, :level => craftman.level} }
+    Craftman.find(:all, :conditions => ["level > 0"], :order => 'level DESC').collect { |craftman| @craftmen[craftman.crafting_id][:members] << {:name => craftman.member.name, :level => craftman.level} }
     
   end
 end
