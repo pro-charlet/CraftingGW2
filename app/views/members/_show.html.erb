@@ -14,7 +14,7 @@
       <% end %>
       <td><%= image_tag craftman.craft_image, :size => "25x25" unless craftman.craft_image.nil? %></td>
       <%= form_for(craftman, :html => { :class => "left"}) do |f| %>
-      <td style="width: 150px"><%= craftman.craft_name %></td><td><%= f.number_field :level, :size => 1 %></td><td><%= image_submit_tag 'save.png', :method => 'PUT', :class => "button" %></td>
+      <td style="width: 150px"><%= link_to craftman.craft_name, crafting_path(craftman.crafting_id) %></td><td><%= f.number_field :level, :size => 1 %></td><td><%= image_submit_tag 'save.png', :method => 'PUT', :class => "button" %></td>
       <% end %>
 	  <td></td>
       </tr>

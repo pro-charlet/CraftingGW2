@@ -8,6 +8,7 @@ Genesis::Application.routes.draw do
   resources :boards
   resources :craftmen
   resources :recipies
+  resources :crafting
   
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

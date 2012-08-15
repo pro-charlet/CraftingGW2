@@ -1,4 +1,4 @@
-<div id="board" class="section"><%= link_to image_tag('board.png', :size => '55x30'), root_path %>
+<div id="board" class="section"><%= link_to image_tag('board.png', :size => '55x30'), boards_path %>
   <div class="nom"><h1><%= @member.name %></h1></div>
   <div class="perso"><%= render :partial => "items/show" %></div>    
 </div>

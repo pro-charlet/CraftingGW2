@@ -9,7 +9,7 @@
   <table style="width: 100%">
     <% craftmen.each_value do |crafting| %>
     <tr>
-      <td colspan="4" class="titre"><%= image_tag crafting[:icone], :size => "25x25" unless crafting[:icone].nil? %>  <%= crafting[:name] %>  <%= image_tag crafting[:icone], :size => "25x25" unless crafting[:icone].nil? %></td>
+      <td colspan="4" class="titre"><%= image_tag crafting[:icone], :size => "25x25" unless crafting[:icone].nil? %>  <%= link_to crafting[:name], crafting_path(crafting[:id]) %>  <%= image_tag crafting[:icone], :size => "25x25" unless crafting[:icone].nil? %></td>
     </tr>
     <% crafting[:members].each do |member| %>
     <tr>

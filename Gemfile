@@ -22,6 +22,8 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
+gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
 
 gem 'newrelic_rpm'
 

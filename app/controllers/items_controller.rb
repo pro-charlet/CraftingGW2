@@ -4,7 +4,7 @@ class ItemsController < ApplicationController
   def index
     @items = Item.find(:all, :conditions => ['name ILIKE ?', "%#{params[:search]}%"])
   end
-
+  
   def update
     @item = Item.find(params[:id])
     @item.update_attributes(params[:item])

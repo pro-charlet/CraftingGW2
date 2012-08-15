@@ -1,0 +1,59 @@
+<script type="text/javascript">
+  jQuery(document).ready(function($) {
+    // Code that uses jQuery's $ can follow here.
+    jQuery('#item_list').dataTable( {
+        "bJQueryUI": true,
+        "aaSorting": [[ 2, "asc" ]],
+        "aoColumnDefs": [ 
+            { "bVisible": false, "aTargets": [ 0 ] },
+            { "bSortable": false, "aTargets": [ 1 ] }
+        ],
+        "oLanguage": {
+            "sSearch": "",
+            "sLengthMenu": "Afficher _MENU_",
+            "sInfoFiltered": "",
+            "sZeroRecords": "Aucun item à afficher",
+            "sInfo": "_TOTAL_ items au total (_START_ à _END_)",
+            "oPaginate": {
+                "sFirst": "Première page",
+                "sLast": "Dernière page",
+                "sNext": "Suivante",
+                "sPrevious": "Précédente"
+            }
+        }
+    });
+  });
+  // Code that uses other library's $ can follow here.
+</script>
+
+<div id="list" class="section" style="height: 250px;"><%= link_to image_tag('board.png', :size => '55x30'), boards_path %>
+  <div class="nom"><h1>Items du <%= @crafting.name %></h1></div>
+</div>
+
+<div class="section">
+  <%= render :partial => "items/new" %>
+
+  <div class="bloc left">
+    <div class="titre"><h2>Items réalisable</h2></div>
+    <table id="item_list">
+      <thead>
+        <tr>
+          <th></th>  
+          <th></th>  
+          <th>Niveau</th>
+          <th>Nom</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% @crafting.items.each do |item| %>
+        <tr>
+          <td><%= item.id %></td>  
+          <td><%= image_tag(item.url) unless item.url_missing? %></td>  
+          <td><%= item.niveau %></td>  
+          <td><%= link_to item.name, recipy_path(item.id) %></td>  
+        </tr>
+      <% end %>
+      </tbody>
+    </table>  
+  </div>
+</div>
