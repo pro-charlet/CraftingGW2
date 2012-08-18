@@ -31,13 +31,14 @@ class MembersController < ApplicationController
   end
   
   def start
+    cookies[:phpbb3_hjy2a_u] = "66"
     if cookies[:phpbb3_hjy2a_u].nil? || cookies[:phpbb3_hjy2a_u].empty?
       redirect_to boards_path
     else
       @member = Member.find_by_phpbb_id(cookies[:phpbb3_hjy2a_u])
       
       if @member.nil?
-        @member = Member.create(:name => "New member", :phpbb_id => cookies[:phpbb3_hjy2a_u])
+        @member = Member.create(:name => params[:id].nil? ? "New member" : params[:id], :phpbb_id => cookies[:phpbb3_hjy2a_u])
       end
       
       @craftings = Hash.new
