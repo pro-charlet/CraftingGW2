@@ -31,7 +31,6 @@ class MembersController < ApplicationController
   end
   
   def start
-    cookies[:phpbb3_hjy2a_u] = "66"
     if cookies[:phpbb3_hjy2a_u].nil? || cookies[:phpbb3_hjy2a_u].empty?
       redirect_to boards_path
     else
