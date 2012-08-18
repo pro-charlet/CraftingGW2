@@ -3,11 +3,13 @@
 <head>
   <title>Crafting GW2</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application", "prototype", "effects", "controls" %> 
+  <%= javascript_include_tag "application" %> 
+  <%= javascript_include_tag "jquery.js", "jquery-ui.js", "jquery.dataTables.js" %> 
+  <%= javascript_include_tag "prototype", "effects", "controls" %> 
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="version">Welcome <%= @user %> ! - Version 1.4 - mise à jour le 15 août 2012</div>
+<div class="version">Welcome <%= @user %> ! - Version 2.0 - mise à jour le 18 août 2012</div>
 <%= yield %>
 
 </body>

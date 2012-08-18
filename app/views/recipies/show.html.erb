@@ -1,4 +1,4 @@
-<div id="board" class="section"><%= link_to image_tag('board.png', :size => '55x30'), root_path %>
+<div id="board" class="section"><%= link_to image_tag('board.png', :size => '55x30'), boards_path %>
   <div class="nom"><%= image_tag(@item.url) unless @item.url_missing? %><h1>Item: <%= @item.name %></h1></div>
   <div class="nom perso"><%= link_to("Voir les autres recettes du " + @item.crafting.name, crafting_path(@item.crafting_id)) unless @item.crafting_id.nil? %></div>    
   <div class="perso"><%= render :partial => "members/new" %></div>    

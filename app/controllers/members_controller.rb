@@ -17,7 +17,11 @@ class MembersController < ApplicationController
   end
   
   def show
-    @member = Member.find(params[:id])
+    if params[:id] == "0"
+      @member = Member.find_by_phpbb_id(cookies[:phpbb3_hjy2a_u])
+    else  
+      @member = Member.find(params[:id])
+    end
   
     @craftings = Hash.new
     @member.craftmen.each { |craftman| @craftings[craftman.crafting_id] = Wishe.find_crafting(craftman.crafting_id)}
@@ -27,11 +31,15 @@ class MembersController < ApplicationController
   end
   
   def start
-    if params[:id].nil?
+    if cookies[:phpbb3_hjy2a_u].nil? || cookies[:phpbb3_hjy2a_u].empty?
       redirect_to boards_path
     else
-      @member = Member.find_or_create_by_name(params[:id])
-  
+      @member = Member.find_by_phpbb_id(cookies[:phpbb3_hjy2a_u])
+      
+      if @member.nil?
+        @member = Member.create(:name => "New member", :phpbb_id => cookies[:phpbb3_hjy2a_u])
+      end
+      
       @craftings = Hash.new
       @member.craftmen.each { |craftman| @craftings[craftman.crafting_id] = Wishe.find_crafting(craftman.crafting_id)}
         
